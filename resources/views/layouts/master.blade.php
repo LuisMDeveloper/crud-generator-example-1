@@ -46,21 +46,16 @@
 			<div class="col-md-3">
 				<ul class="nav nav-pills nav-stacked">
 					<li class="{{ (Request::is('posts') || (Request::is('posts/*'))) ? 'active' : '' }}"><a href="{{ URL::to('posts') }}">Posts</a></li>
+					<li class="{{ (Request::is('author') || (Request::is('author/*'))) ? 'active' : '' }}"><a href="{{ URL::to('author') }}">Authors</a></li>
 				</ul>
 			</div>
 			<div class="col-md-9">
 				@yield('content')
 			</div>
 		</div>
-
 	</div>
 
 	<hr/>
-
-	<div class="container">
-	    &copy; {{ date('Y') }}. Created by <a href="http://www.appzcoder.com">AppzCoder</a>
-	    <br/>
-	</div>
 
 	<!-- Scripts -->
 	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
